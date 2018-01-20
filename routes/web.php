@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
+
+Route::resource('profile', 'ProfileController', ['only' => [
+    'edit','update'
+]]);

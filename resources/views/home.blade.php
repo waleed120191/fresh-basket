@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in! Check you <a href="{{ route('profile.edit', ['id' => Auth::user()->id]) }}">Profile</a>.
                 </div>
             </div>
         </div>
